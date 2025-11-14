@@ -1,0 +1,168 @@
+{
+  // System tray
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+  },
+  // Updates Count
+  "custom/updates": {
+    "format": "  {}",
+    "escape": true,
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/updates.sh",
+    "interval": 1800,
+    "signal": 1,
+    "hide-empty-text": true,
+    "on-click": "konsole --hold -e sudo pacman -Syu --noconfirm",
+
+  },
+  // Plasma idle inhibitor
+  "custom/idle": {
+    "format": "",
+    "return-type": "json",
+    "escape": true,
+    "exec-on-event": true,
+    "interval": 60,
+    "on-click": "~/.config/hypr/scripts/hypridle.sh toggle"
+  },
+ // Network
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": " {signalStrength}%",
+    "format-ethernet": "  {ifname}",
+    "format-disconnected": "Disconnected ⚠",
+    "tooltip-format": " {ifname} via {gwaddri}",
+    "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+    "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+    "on-click": "kcm_mobile_wifi",
+    "on-click-right": "kcmshell6 kcm_networkmanagement",
+  },
+
+  // Battery
+  "battery": {
+    "interval": 1,
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "  {capacity}%",
+    "format-plugged": "  {capacity}%",
+    "format-alt": "{icon}  {time}",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+      "on-click": "kcmshell6 kcm_powerdevilprofilesconfig",
+  },
+  // Power Profiles Daemon
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+    }
+  },
+  // Pulseaudio
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": " ",
+      "headset": " ",
+      "phone": " ",
+      "portable": " ",
+      "car": " ",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "kcmshell6 kcm_pulseaudio"
+  },
+
+  // Plasma inhibitor
+  "custom/hypridle": {
+  "format": "{text}",
+  "return-type": "json",
+  "escape": true,
+  "exec-on-event": true,
+  "interval": 60,
+  "exec": "~/.config/waybar/scripts/status.sh",
+  "on-click": "~/.config/waybar/scripts/status.sh toggle",
+},
+
+  // Empty
+  "custom/empty": {
+    "format": ""
+  },
+  // Plasma Launcher
+  "custom/appmenu": {
+    // START APPS LABEL
+    "format": " ",
+    // END APPS LABEL
+    "on-click": "~/.config/rofi/launcher.sh",
+    "on-click-right": "rofi -show filebrowser",
+    "tooltip-format": "Left: Open the application launcher\nRight click: Show run dialog",
+   
+  },
+
+  // Power Menu
+  "custom/exit": {
+    "format": "",
+    "on-click": "~/.config/rofi/powermenu.sh",
+    "on-click-right": "hyprlock",
+    "tooltip-format": "Left: Power menu\nRight: Lock screen"
+  },
+
+  // Bluetooth
+  "bluetooth": {
+    "format": " {status}",
+    "format-disabled": "",
+    "format-off": "",
+    "interval": 30,
+    "on-click": "kcmshell6 kcm_bluetooth",
+    "format-no-controller": ""
+  },
+  // backlight:
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "scroll-step": 1
+  }
+}
