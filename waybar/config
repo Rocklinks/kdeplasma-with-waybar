@@ -13,6 +13,9 @@
     // Modules Left
     "modules-left": [
         "custom/appmenu",
+        "custom/workspace1",
+        "custom/workspace2",
+        "custom/workspace3",
         "custom/updates",
         "custom/empty",
         
