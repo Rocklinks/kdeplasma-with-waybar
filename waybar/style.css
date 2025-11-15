@@ -146,12 +146,22 @@ window#waybar {
  * Workspaces
  * ----------------------------------------------------- */
 
-#workspaces {
+#custom-workspace1 {
     margin: 0px 7px 0px 0px;
-    min-width: 210px;
+    min-width: 21px;
+    background-color: @background;
+    font-size: 16px;
+    color: @on_primary;
+    border-radius: 6px;
+    padding: 3px 5px 3px 5px;
 }
 
-#workspaces button {
+#custom-workspace1:hover {
+    background: #B799FF;
+    border-color: #B799FF;
+}
+
+#custom-workspace1 button {
     padding: 0px 6px;
     margin: 3px 3px;
     border-radius: 8px;
@@ -161,7 +171,7 @@ window#waybar {
     border: 2px solid @primary;
 }
 
-#workspaces button.active {
+#custom-workspace1 button.active {
     color: @on_primary;
     background: @primary;
     border-radius: 12px;
@@ -170,14 +180,99 @@ window#waybar {
     min-width: 30px;
 }
 
-#workspaces button:hover {
+#custom-workspace1 button:hover {
     color: @on_surface;
-    background: @primary_container;
+    background: #B799FF;
+    border-color: #B799FF;
     border-radius: 15px;
-    border-color: @primary;
     box-shadow: none;
 }
 
+/* Workspace 2 */
+#custom-workspace2 {
+    margin: 0px 7px 0px 0px;
+    min-width: 21px;
+    background-color: @background;
+    font-size: 16px;
+    color: @on_primary;
+    border-radius: 6px;
+    padding: 3px 5px 3px 5px;
+}
+
+#custom-workspace2:hover {
+    background: #B799FF;
+    border-color: #B799FF;
+}
+
+#custom-workspace2 button {
+    padding: 0px 6px;
+    margin: 3px 3px;
+    border-radius: 8px;
+    color: @on_surface;
+    background-color: @background;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid @primary;
+}
+
+#custom-workspace2 button.active {
+    color: @on_primary;
+    background: @primary;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    border-color: @primary;
+    min-width: 30px;
+}
+
+#custom-workspace2 button:hover {
+    color: @on_surface;
+    background: #B799FF;
+    border-color: #B799FF;
+    border-radius: 15px;
+    box-shadow: none;
+}
+
+/* Workspace 3 */
+#custom-workspace3 {
+    margin: 0px 7px 0px 0px;
+    min-width: 21px;
+    background-color: @background;
+    font-size: 16px;
+    color: @on_primary;
+    border-radius: 6px;
+    padding: 3px 5px 3px 5px;
+}
+
+#custom-workspace3:hover {
+    background: #B799FF;
+    border-color: #B799FF;
+}
+
+#custom-workspace3 button {
+    padding: 0px 6px;
+    margin: 3px 3px;
+    border-radius: 8px;
+    color: @on_surface;
+    background-color: @background;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid @primary;
+}
+
+#custom-workspace3 button.active {
+    color: @on_primary;
+    background: @primary;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    border-color: @primary;
+    min-width: 30px;
+}
+
+#custom-workspace3 button:hover {
+    color: @on_surface;
+    background: #B799FF;
+    border-color: #B799FF;
+    border-radius: 15px;
+    box-shadow: none;
+}
 /* -----------------------------------------------------
  * Tooltips
  * ----------------------------------------------------- */
@@ -209,39 +304,6 @@ tooltip label {
 
 window#waybar.empty #window {
     background-color:transparent;
-}
-
-/* -----------------------------------------------------
- * Taskbar
- * ----------------------------------------------------- */
-
-#taskbar {
-    background: @primary;
-    margin: 3px 15px 3px 0px;
-    padding:0px;
-    border-radius: 8px;
-    font-weight: normal;
-    font-style: normal;
-    opacity:1.0;
-    border: 2px solid @border_color;
-}
-
-#taskbar button {
-    margin:0;
-    border-radius: 8px;
-    padding: 0px 5px 0px 5px;
-}
-
-#taskbar button:hover {
-    background: alpha(#ffffff,0.1);
-    box-shadow: none;
-}
-
-#taskbar.empty {
-    background:transparent;
-    border:0;
-    padding:0;
-    margin:0;
 }
 
 /* -----------------------------------------------------
@@ -606,5 +668,4 @@ window#waybar.empty #window {
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
 }
-
 
