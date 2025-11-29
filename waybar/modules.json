@@ -13,7 +13,7 @@
     "interval": 1800,
     "signal": 1,
     "hide-empty-text": true,
-    "on-click": "konsole --hold -e sudo pacman -Syu --noconfirm",
+    "on-click": "konsole -e sudo pacman -Syu --noconfirm",
 
   },
 
@@ -120,6 +120,8 @@
   // Plasma inhibitor
   "custom/hypridle": {
   "format": "{text}",
+  "font-family": "Font Awesome 6 Free, Noto Sans, sans-serif",
+  "font-weight": "900", 
   "return-type": "json",
   "escape": true,
   "exec-on-event": true,
