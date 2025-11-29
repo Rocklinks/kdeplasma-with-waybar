@@ -42,7 +42,6 @@
         "battery",
         "power-profiles-daemon",
         "custom/empty",
-        "custom/hypridle",
         "custom/exit",
     ]
 }
